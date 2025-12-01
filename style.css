@@ -1,0 +1,72 @@
+/* --- Styles généraux --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Arial", sans-serif;
+    background: linear-gradient(#b30000, #4d0000);
+    color: white;
+    text-align: center;
+}
+
+/* --- Header --- */
+header {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 5px black;
+}
+
+/* --- Grille du calendrier --- */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* --- Cases --- */
+.door {
+    background: #fff3;
+    border: 2px solid #fff6;
+    border-radius: 10px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    font-size: 2.2em;
+    font-weight: bold;
+    color: #fff;
+
+    position: relative;
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Numéro en haut à gauche */
+.door::before {
+    content: attr(data-number);
+    position: absolute;
+    top: 8px;
+    left: 10px;
+    font-size: 1em;
+    opacity: 0.8;
+}
+
+/* Effet au survol */
+.door:hover {
+    transform: scale(1.1);
+    background: #ffffff55;
+}
+
+/* Effet d'ouverture (quand on clique) */
+.door.opened {
+    background: #fff;
+    color: #b30000;
+    transform: scale(1);
+}
