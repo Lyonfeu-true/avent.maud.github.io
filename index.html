@@ -10,25 +10,15 @@
 
     <header>
         <h1>🎁 Calendrier de l'Avent 🎄</h1>
-        <p>Ouvre chaque case jusqu'à Noël !</p>
+        <p>Pour ma petite chériiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiie</p>
     </header>
 
     <div class="calendar">
-        <!-- Génération des 24 cases -->
-        <!-- Tu peux remplacer le contenu par des images ou messages -->
-        <!-- Case 1 à 24 -->
-        <!-- Chaque case possède un attribut data-number -->
-        <!-- Effet d'ouverture géré en CSS (ou tu peux ajouter JS plus tard) -->
-        
-        <!-- On génère 24 cases -->
-        <!-- Tu peux remplacer l'intérieur par ce que tu veux -->
-        <!-- Exemple : <div class="door" data-number="1"><span>✨ Surprise !</span></div> -->
 
-        <!-- Génération automatique par duplication -->
-        <!-- Case 1 à 24 -->
-        <!-- (ci-dessous les 24 blocs) -->
+        <!-- Case 1 avec un ID pour pouvoir la détecter -->
+        <div class="door" data-number="1" id="case1"><span>🎅</span></div>
 
-        <div class="door" data-number="1"><span>🎅</span></div>
+        <!-- Les autres cases sont normales -->
         <div class="door" data-number="2"><span>🎁</span></div>
         <div class="door" data-number="3"><span>❄️</span></div>
         <div class="door" data-number="4"><span>⛄</span></div>
@@ -52,7 +42,17 @@
         <div class="door" data-number="22"><span>🎍</span></div>
         <div class="door" data-number="23"><span>🛷</span></div>
         <div class="door" data-number="24"><span>🌟</span></div>
+
     </div>
+
+    <!-- Script -->
+    <script>
+        // Fonction d'ouverture de la case 1
+        document.getElementById("case1").addEventListener("click", () => {
+            // Ouvre une page locale que tu vas créer ensuite
+            window.location.href = "case1.html";
+        });
+    </script>
 
 </body>
 </html>
