@@ -19,7 +19,7 @@
         <div class="door" data-number="1" id="case1"><span>🎅</span></div>
 
         <!-- Les autres cases sont normales -->
-        <div class="door" data-number="2"><span>🎁</span></div>
+        <div class="door" data-number="2" id="case2" ><span>🎁</span></div>
         <div class="door" data-number="3"><span>❄️</span></div>
         <div class="door" data-number="4"><span>⛄</span></div>
         <div class="door" data-number="5"><span>🌟</span></div>
@@ -51,6 +51,9 @@
         document.getElementById("case1").addEventListener("click", () => {
             // Ouvre une page locale que tu vas créer ensuite
             window.location.href = "case1.html";
+        document.getElementById("case2").addEventListener("click", () => {
+            // Ouvre une page locale que tu vas créer ensuite
+            window.location.href = "case2.html";
         });
     </script>
 
